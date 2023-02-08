@@ -26,12 +26,15 @@
     </div>
    <div>
        <label for="name">Seleccione su país de nacimiento</label>
-           <select class="form-control">
-                <option>Argentina</option>
-                 <option>Brasil</option>
-                 <option>Chile</option>
-                 <option>Uruguay</option>
-            </select>
+           <asp:DropDownList ID="ddlPais" runat="server" ValidationGroup="Registro" CssClass="form-control" >
+                     
+                
+                <asp:ListItem Text="Argentina" Value="Argentina"></asp:ListItem>
+                       <asp:ListItem Text="Chile" Value="Chile"></asp:ListItem>
+                       <asp:ListItem Text="Brasil" Value="Brasil"></asp:ListItem>
+                       <asp:ListItem Text="Uruguay" Value="Uruguay"></asp:ListItem>
+                       
+                   </asp:DropDownList>
    </div>
     <di>
         <label>Seleccione el curso en desarrollo</label>
