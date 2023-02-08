@@ -78,7 +78,9 @@
       <input type="password" class="form-control" id="Password2" placeholder="Password">
 
     </div>
-        <input id="Button1" type="button" value="Enviar" />
+        
+            <asp:Button ID="Button1" CssClass="btn btn-primary" runat="server" Text="Enviar" OnClick="Button1_Click" />
+        
         <input id="Button2" type="button" value="Cancelar" />
 
 
