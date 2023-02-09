@@ -36,21 +36,17 @@
                        
                    </asp:DropDownList>
    </div>
-    <di>
+    <br />
+    <div>
         <label>Seleccione el curso en desarrollo</label>
     <br />
-    <div class="radio">
-      <label>
-      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>   JAVA </label>
+        <asp:RadioButtonList ID="RadioButtonList1" runat="server">
+
+                       <asp:ListItem Text="HTML" Value="HTML" runat="server"></asp:ListItem>
+                       <asp:ListItem Text=".NET" Value=".NET" runat="server"></asp:ListItem>
+                       <asp:ListItem Text="JAVA" Value="JAVA" runat="server"></asp:ListItem>  
+            </asp:RadioButtonList>
     </div>
-     <div class="radio">
-       <label>
-       <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" />.NET  </label>
-     </div>
-     <div class="radio">
-         <label>
-         <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3"> UX/UI  </label>
-      </div>
          <br />
      <div class="form-group">
         <label for="email">Ingrese su email</label>
@@ -64,9 +60,21 @@
         <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Falta completar este campo" controltovalidate="txtfecha"></asp:RequiredFieldValidator>
 
     </div> 
+    <div>
+        <label>Conocimientos</label>
+            <asp:CheckBoxList ID="CheckBoxList1" runat="server">
+            <asp:ListItem text="HTML" Value="html"></asp:ListItem>
+            <asp:ListItem text="Javascript" Value="javascript"></asp:ListItem>
+            <asp:ListItem text="Jquery" Value="jquery"></asp:ListItem>
+            <asp:ListItem text="CSS" Value="css"></asp:ListItem>
+            <asp:ListItem text=".NET" Value=".net"></asp:ListItem>
+            <asp:ListItem text="SQL Server" Value="sql server"></asp:ListItem>
+        </asp:CheckBoxList>
+    </div>
      <div>
          <label for="name:">Otros conocimientos:</label>
-         <textarea class="form-control" rows="3"></textarea>
+         <br />
+         <textarea class="form-contro<asp:TextBox runat=" rows="3" server=""></textarea>
     </div>
     <div class="form-group">
       <label for="inputPassword3">Clave</label>
@@ -81,7 +89,7 @@
         
             <asp:Button ID="Button1" CssClass="btn btn-primary" runat="server" Text="Enviar" OnClick="Button1_Click" />
         
-        <input id="Button2" type="button" value="Cancelar" />
+             <asp:Button ID="Button2" CssClass="btn btn-primary" runat="server" Text="Cancelar" OnClick="Button2_Click" />
 
 
 </asp:Content>
